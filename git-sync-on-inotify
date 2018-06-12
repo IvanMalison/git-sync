@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+while changedFile=$(inotifywait ./ -r -e modify,move,create,delete --format "%w%f" --exclude '\.git' 2>/dev/null); do
+	git check-ignore "$changedFile" >> /dev/null || git-sync
+done
