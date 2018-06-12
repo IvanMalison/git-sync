@@ -4,7 +4,7 @@ sychronize tracking repositories
 
 2012 by Simon Thum
 
-This scrips intends to sync near-automatically via git 
+This scrips intends to sync near-automatically via git
 in "tracking" repositories where a nice history is not
 as crucial as having one.
 
@@ -98,7 +98,7 @@ name and time by default.
 There are three `git config`-based options for tailoring your sync:
 
     branch.$branch_name.syncNewFiles (bool)
-    
+
 Tells git-sync to invoke auto-commit even if new (untracked) files are
 present. Normally you have to commit those yourself to prevent
 accidential additions. git-sync will exit at stage 3 with an
@@ -110,7 +110,7 @@ A string which will be used in place of the default commit message (as shown
 below).
 
     branch.$branch_name.autocommitscript (string)
-	
+
 A string which is being eval'ed by this script to perform an
 auto-commit. Here you can run a commit script which should not
 leave any uncommited state. The default will commit modified or

@@ -146,7 +146,7 @@ sync_state()
 	    ;;
 	"0	0")
 	    echo "equal"
-	    true 
+	    true
 	    ;;
 	"0	"*)
 	    echo "ahead"
@@ -209,7 +209,7 @@ if [ -z "$remote_name" ] ; then
     echo
     echo "git-sync: Please use"
     echo
-    echo "  git branch --set-upstream-to=[remote_name]/$branch_name" 
+    echo "  git branch --set-upstream-to=[remote_name]/$branch_name"
     echo
     echo "replacing [remote_name] with the name of your remote, i.e. - origin"
     echo "to set the remote tracking branch for git-sync to work"
@@ -264,7 +264,7 @@ fi
 if [ ! -z "$(local_changes)" ]; then
     autocommit_cmd=""
     config_autocommit_cmd="$(git config --get branch.$branch_name.autocommitscript)"
-    
+
     # discern the three ways to auto-commit
     if [ ! -z "$config_autocommit_cmd" ]; then
 	autocommit_cmd="$config_autocommit_cmd"
@@ -342,4 +342,3 @@ case "$(sync_state)" in
 	# TODO: save master, if rebasing fails, make a branch of old master
 	;;
 esac
-
